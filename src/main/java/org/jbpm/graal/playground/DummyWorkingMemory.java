@@ -70,15 +70,15 @@ import org.kie.api.time.SessionClock;
  * A severely limited implementation of the WorkingMemory interface.
  * It only exists for legacy reasons.
  */
-class ProcessUnitDummyWorkingMemory implements InternalWorkingMemory,
-                                               InternalKnowledgeRuntime {
+class DummyWorkingMemory implements InternalWorkingMemory,
+                                    InternalKnowledgeRuntime {
 
     private final TimerService timerService;
     private final EnvironmentImpl environment;
     private final KieBase kieBase;
     private InternalProcessRuntime processRuntime;
 
-    ProcessUnitDummyWorkingMemory(KieBase kieBase) {
+    DummyWorkingMemory(KieBase kieBase) {
         this.kieBase = kieBase;
         environment = new EnvironmentImpl();
         timerService = new JDKTimerService();
