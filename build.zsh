@@ -38,5 +38,6 @@ cp=(
 )
 
 $NATIVE_IMAGE -H:ReflectionConfigurationFiles=reflection.json -classpath ${(j.:.)${cp}} org.jbpm.graal.playground.Main
+#time java -classpath ${(j.:.)${cp}} org.jbpm.graal.playground.Main
 
 
